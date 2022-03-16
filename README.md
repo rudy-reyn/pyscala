@@ -6,7 +6,9 @@ I wrote up a quick port of a few of the main data structures in Scala into Pytho
 Iterable base class, allowing for easy subclassing for Seq and Lists, as well as other data
 structures I haven't gotten around to yet.
 
-Example usages:
+
+## Examples
+
 ```python3
 >>> from pyscala import List
 
