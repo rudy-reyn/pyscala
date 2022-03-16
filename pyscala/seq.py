@@ -37,6 +37,8 @@ class ConcatIterable:
         return AttributeError(
             f"cannot {type} attribute, ConcatIterable is used for a single concatenation between iterables with '++'")
 
+# TODO: Port over more of the Scala Seq and List API.
+
 class Seq(Iterable):
     def __pos__(self):
         return ConcatIterable(*self)
@@ -61,7 +63,7 @@ class Seq(Iterable):
 
     @return_cls
     def sortWith(self, lt):
-        return self.__class__(*sorted(self, key=lt))
+        return sorted(self, key=lt)
 
 class List(Seq):
     pass
