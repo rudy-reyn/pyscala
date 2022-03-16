@@ -2,14 +2,6 @@
 # Iterable.py
 from functools import wraps
 
-class View(tuple):
-    __slots__ = ()
-    def __new__(cls, items):
-        return tuple.__new__(cls, items)
-
-    def __repr__(self):
-        return f"View{tuple(self)}"
-
 def singleton(cls):
     return cls()
 
@@ -261,3 +253,11 @@ class Iterable(tuple):
     def zipWithIndex(self):
         cls = self.__class__
         return cls(*((v, i) for i, v in enumerate(self)))
+
+class View(tuple):
+    __slots__ = ()
+    def __new__(cls, items):
+        return tuple.__new__(cls, items)
+
+    def __repr__(self):
+        return f"View{tuple(self)}"
