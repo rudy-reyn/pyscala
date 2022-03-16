@@ -101,6 +101,7 @@ def test_mkString(lst):
 def test_partition(lst, is_even):
     assert lst.partition(is_even) == (Iterable(2, 4), Iterable(1, 3))
     assert lst.map(is_even).partition(lambda i: i) == (Iterable(True, True), Iterable(False, False))
+
 def test_reverse(lst):
     assert lst.reverse == tuple(reversed(lst)) == tuple(lst[::-1])
 
