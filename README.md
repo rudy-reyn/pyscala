@@ -31,7 +31,7 @@ List(1, 2, 3, 4, 5)
 ```
 
 
-Most of the standard Iterator operations like partition, zip, foldLeft, filter, and the rest are supported.
+Most of the standard Iterator operations such as partition, zip, foldLeft, and filter are supported.
 ```python3
 >>> lst.zipWithIndex
 List((1, 0), (2, 1), (3, 2), (4, 3))
