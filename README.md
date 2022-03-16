@@ -6,7 +6,9 @@ I wrote up a quick port of a few of the main data structures in Scala into Pytho
 Iterable base class, allowing for easy subclassing for Seq and Lists, as well as other data
 structures I haven't gotten around to yet.
 
-Example usages:
+
+## Examples
+
 ```python3
 >>> from pyscala import List
 
@@ -31,7 +33,7 @@ List(1, 2, 3, 4, 5)
 ```
 
 
-Most of the standard Iterator operations like partition, zip, foldLeft, filter, and the rest are supported.
+Most of the standard Iterator operations such as partition, zip, foldLeft, and filter are supported.
 ```python3
 >>> lst.zipWithIndex
 List((1, 0), (2, 1), (3, 2), (4, 3))
